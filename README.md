@@ -15,6 +15,11 @@ cd PSObfuscate
 python3 PsObfuscate.py
 ```
 
+## Video Demo
+
+{{< youtube zu2USEC05bY >}
+
+
 ## What It Does
 
 1. **Source** - Built-in TCP reverse shell or load any script
