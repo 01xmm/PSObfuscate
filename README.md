@@ -17,7 +17,7 @@ python3 PsObfuscate.py
 
 ## Video Demo
 
-[![Video Title](https://img.youtube.com/vi/zu2USEC05bY/psobfuscate.png)](https://www.youtube.com/watch?v=zu2USEC05bY)
+[![Psobfuscate Video Demo](https://img.youtube.com/vi/zu2USEC05bY/PSObfuscate.png)](https://www.youtube.com/watch?v=zu2USEC05bY)
 
 
 ## What It Doesk
