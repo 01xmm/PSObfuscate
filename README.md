@@ -17,10 +17,10 @@ python3 PsObfuscate.py
 
 ## Video Demo
 
-{{< youtube zu2USEC05bY >}
+[![Video Title](https://img.youtube.com/vi/zu2USEC05bY/psobfuscate.png)](https://www.youtube.com/watch?v=zu2USEC05bY)
 
 
-## What It Does
+## What It Doesk
 
 1. **Source** - Built-in TCP reverse shell or load any script
 2. **Encode** - Apply encoding layers (Base64, Hex, ASCII, URL, Binary, Reverse) or structural obfuscation
