@@ -5,6 +5,7 @@
 <h1 align="center">PSObfuscate</h1>
 <p align="center">PowerShell Payload Builder & Obfuscator</p>
 
+
 Build, encode, wrap, and deliver PowerShell payloads. Single Python file, zero dependencies. 
 
 ## Quick Start
