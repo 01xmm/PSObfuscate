@@ -7,9 +7,7 @@
 
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=zu2USEC05bY">
-    <img src="https://img.youtube.com/vi/zu2USEC05bY/maxresdefault.jpg" alt="Demo Video" width="600">
-  </a>
+  <a href="https://www.youtube.com/watch?v=zu2USEC05bY">Demo Video</a>
 </p>
 
 ## Quick Start
