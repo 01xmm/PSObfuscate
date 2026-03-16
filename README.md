@@ -6,6 +6,11 @@
 <p align="center">PowerShell Payload Builder & Obfuscator</p>
 
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=zu2USEC05bY">
+    <img src="https://img.youtube.com/vi/zu2USEC05bY/maxresdefault.jpg" alt="Demo Video" width="600">
+  </a>
+</p>
 
 ## Quick Start
 
@@ -15,12 +20,7 @@ cd PSObfuscate
 python3 PsObfuscate.py
 ```
 
-## Video Demo
-
-[![Psobfuscate Video Demo](https://img.youtube.com/vi/zu2USEC05bY/PSObfuscate.png)](https://www.youtube.com/watch?v=zu2USEC05bY)
-
-
-## What It Doesk
+## What It Does
 
 1. **Source** - Built-in TCP reverse shell or load any script
 2. **Encode** - Apply encoding layers (Base64, Hex, ASCII, URL, Binary, Reverse) or structural obfuscation
