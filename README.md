@@ -3,6 +3,7 @@
 PowerShell Payload Builder & Obfuscator
 
 Build, encode, wrap, and deliver PowerShell payloads. Single Python file, zero dependencies. 
+
 For authorized use only.
 
 ## Quick Start
@@ -15,7 +16,7 @@ python3 PsObfuscate.py
 
 ## What It Does
 
-1. **Source** - Built-in TCP reverse shell or load any `.ps1` script
+1. **Source** - Built-in TCP reverse shell or load any script
 2. **Encode** - Apply encoding layers (Base64, Hex, ASCII, URL, Binary, Reverse) or structural obfuscation
 3. **Wrap** - Package as raw `.ps1`, encoded launcher, `.bat`, `.vbs`, or `.hta`
 4. **Deliver** - Print, copy, save, or spin up an HTTP server + netcat listener
