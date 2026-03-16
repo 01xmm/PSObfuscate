@@ -6,7 +6,6 @@
 <p align="center">PowerShell Payload Builder & Obfuscator</p>
 
 
-Build, encode, wrap, and deliver PowerShell payloads.
 
 ## Quick Start
 
