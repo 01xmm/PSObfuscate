@@ -6,7 +6,7 @@
 <p align="center">PowerShell Payload Builder & Obfuscator</p>
 
 
-Build, encode, wrap, and deliver PowerShell payloads. Single Python file, zero dependencies. 
+Build, encode, wrap, and deliver PowerShell payloads.
 
 ## Quick Start
 
